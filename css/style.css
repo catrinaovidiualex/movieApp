@@ -8,6 +8,28 @@ body{
     font-family: "Poppins", sans-serif;
     margin:0px;
 }
+
+header{
+    background-color: #373b69;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header input{
+    border-radius: 50px;
+    /*background-color: transparent;*/
+    background-color: #636588;
+    border: 2px solid #22254b;
+    padding: 0.5rem;
+}
+
+header input::placeholder{
+    color:rgb(173, 170, 173);
+    font-weight: bold;
+    font-size: 15px;;
+}
+
 main{
     display: flex;
     flex-wrap: wrap;
@@ -19,6 +41,7 @@ main{
     box-shadow: 0 4px 5px rgba(0,0,0,0.2);
     width:300px;
     margin: 0.8rem;
+    overflow: hidden;
 }
 
 .movie img{
