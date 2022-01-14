@@ -16,18 +16,25 @@ header{
     justify-content: flex-end;
 }
 
-header input{
+.search{
     border-radius: 50px;
     /*background-color: transparent;*/
     background-color: #636588;
     border: 2px solid #22254b;
     padding: 0.5rem;
+    color:ivory;
 }
 
-header input::placeholder{
+.search::placeholder{
     color:rgb(173, 170, 173);
     font-weight: bold;
-    font-size: 15px;;
+    font-size: 1rem;
+    font-family: inherit;
+}
+.search:focus{
+    outline:none;
+    background-color: #22254b;
+
 }
 
 main{
