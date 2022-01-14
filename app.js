@@ -9,14 +9,15 @@ async function getMovies(){
 
 
 
-    respData.results.forEach((movie) => {
+   /* respData.results.forEach((movie) => {
 
         let img =document.createElement("img");
         img.src=imgPATH + movie.poster_path;
 
         document.body.appendChild(img);
         
-    });
+    });*/
+    return respData;
 } 
 
 getMovies();
