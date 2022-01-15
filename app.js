@@ -5,7 +5,7 @@ const imgPATH="https://image.tmdb.org/t/p//w1280";
 let searchAPI="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 let main=document.getElementById("main");
 let form=document.getElementById("form");
-let search=document.getElementsByClassName("search");
+let search=document.getElementById("search");
 
 getMovies(apiURL);
 
@@ -81,9 +81,9 @@ let searchTerm=search.value;
 
 if(searchTerm){
 
-  getMovies(searchAPI+searchTerm);
+  getMovies(searchAPI + searchTerm);
 
-    search.value='';
+    search.value="";
 
 }
 
