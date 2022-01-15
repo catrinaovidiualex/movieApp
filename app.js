@@ -15,7 +15,7 @@ getMovies(apiURL);
 async function getMovies(url){
     const resp=await fetch(url);
     const respData=await resp.json();
-    /*console.log(respData);*/
+    console.log(respData);
 
    /* respData.results.forEach((movie) => {
 
@@ -58,7 +58,22 @@ function showMovies(movies){
         const {poster_path,title,vote_average}=movie;
         let movieElement=document.createElement("div");
         movieElement.classList.add("movie");
-        movieElement.innerHTML=`
+        
+
+        if(poster_path===null){
+
+            movieElement.innerHTML=`
+            <img src="../img/notFoundPic.jpg" 
+            alt="${title}"/>
+            <div class="movie-info">
+                <h3>${title}</h3>
+                <span>${vote_average}</span>
+            </div>
+            `;
+    
+
+        }else{
+            movieElement.innerHTML=`
         <img src="${imgPATH+poster_path}" 
         alt="${title}"/>
         <div class="movie-info">
@@ -66,6 +81,8 @@ function showMovies(movies){
             <span>${vote_average}</span>
         </div>
         `;
+
+        }
 
         main.appendChild(movieElement);
     });
