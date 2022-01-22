@@ -148,6 +148,10 @@ function setMovies(arr,pageNumber){
 
 }
 
+function movieButtons(numar){
+    
+}
+
 
 
 });
