@@ -104,6 +104,15 @@ if(searchTerm){
 
 }
 
+function pgintion(arr,pag,nrMovie){
+    let newMovies=[];
+    for(let i=(pag-1)*nrMovie;i<pag*nrCard;i++){
+        newMovies.push(arr[i]);
+    }
+    return newMovies;
+
+}
+
 
 
 
