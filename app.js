@@ -104,7 +104,7 @@ if(searchTerm){
 
 }
 
-function pgintion(arr,pag,nrMovie){
+function pagination(arr,pag,nrMovie){
     let newMovies=[];
     for(let i=(pag-1)*nrMovie;i<pag*nrCard;i++){
         newMovies.push(arr[i]);
@@ -113,6 +113,40 @@ function pgintion(arr,pag,nrMovie){
 
 }
 
+function setMovies(arr,pageNumber){
+
+
+    if(window.innerWidth<320){
+
+             
+        let x=pagination(arr,pageNumber,4);
+        showMovies(x);
+
+        /*generatePageButtons((arr.length+1)/4);*/
+
+
+
+   }else if(window.innerWidth>=320 && window.innerWidth<720){
+
+        let x=pagination(arr,pageNumber,8);
+        showMovies(x);
+
+        /*generatePageButtons((arr.length+1)/8);*/
+   }
+
+   else if(window.innerWidth>=720 && window.innerWidth<920){
+
+       let x=pagination(arr,pageNumber,12);
+       showMovies(x);
+       /*generatePageButtons((arr.length+1)/12);*/
+   }
+   else if(window.innerWidth>=920){
+       let x=pagination(arr,pageNumber,12);
+       showMovies(x);
+       /*generatePageButtons((arr.length+1)/12);*/
+   }
+
+}
 
 
 
